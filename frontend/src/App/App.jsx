@@ -46,7 +46,9 @@ function App() {
   const [showJoinRoom, setShowJoinRoom] = useState(false);
   const [provider, setProvider] = useState(null);
   const [showWelcome, setShowWelcome] = useState(true);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(
+    () => typeof window === "undefined" || window.innerWidth >= 1024,
+  );
   const [stdin, setStdin] = useState("");
   const [ioTab, setIoTab] = useState("input");
   const [output, setOutput] = useState(null);
@@ -344,7 +346,9 @@ function App() {
 
       <aside
         className={`fixed lg:static inset-y-3 left-3 z-50 flex flex-col w-72 shrink-0 bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl transition-transform duration-300 ${
-          sidebarOpen ? "translate-x-0" : "translate-x-[110%] lg:hidden"
+          sidebarOpen
+            ? "translate-x-0"
+            : "translate-x-[120%] invisible lg:hidden lg:visible"
         }`}
       >
         {/* Brand + close */}
