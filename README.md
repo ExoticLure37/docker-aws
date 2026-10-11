@@ -150,16 +150,9 @@ Expected response:
 - `docker.pdf` — Docker concepts and setup notes
 - `aws-setup.pdf` — AWS-related setup guidance
 
-## License
-
-This project does not currently declare a project-specific license in the repository metadata. Please check the repository contents and original source before commercial reuse.
-
 ## Contributing
 
-This is primarily a learning and experimentation repository. If you want to extend it, you can:
-
-- add better Docker Compose support
-- improve project documentation
+This is primarily a learning and experimentation repository as forked from Ankur Prajapati sir '@ankurdotio'. If you want to extend it, you can :)
 - add authentication or room-based collaboration
 - deploy to a cloud provider such as AWS EC2 or ECS
 
